@@ -1,0 +1,36 @@
+{
+  "name": "@civ-clone/base-government-military-unhappiness",
+  "version": "0.1.0",
+  "description": "Military unhappiness: under some governments, a city's aggressive units make its citizens unhappy.",
+  "repository": "git@github.com:civ-clone/base-government-military-unhappiness.git",
+  "keywords": [
+    "typescript",
+    "civilization"
+  ],
+  "author": "dom111 <dom111@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "npm run ts:compile && npm run prettier:format",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
+    "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
+    "ts:compile": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.0.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "@civ-clone/base-city-yield-military-unhappiness": "^0.1.2",
+    "@civ-clone/core-city": "^0.1.24",
+    "@civ-clone/core-government": "^0.1.6",
+    "@civ-clone/core-unit": "^0.1.30"
+  }
+}
